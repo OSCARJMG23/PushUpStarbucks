@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    font-family: "Poppins", sans-serif;
+    --color1: #087f5b ;
+    --color2: #fff ;
+}
+.nav-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    position: relative;
+    background-color: var(--color2);
+    padding: 12px 20px;
+}
+.logo img {width: 40px;}
+.menu {display: flex;}
+.menu li {padding-left: 30px;}
+.menu li a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--color1);
+    text-align: center;
+    transition: 0.15s ease-in-out;
+    position: relative;
+    text-transform: uppercase;
+}
+.menu li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--color1);
+    transition: 0.15s ease-in-out;
+}
+.menu li a:hover:after {width: 100%;}
+.open-menu , .close-menu {
+    position: absolute;
+    color: var(--color1);
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none;
+}
+.menu li a:focus{
+    border: #087f5b 1px solid;
+}
+.open-menu {
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+.close-menu {
+    top: 20px;
+    right: 20px;
+}
+#check {display: none;}
+@media(max-width: 610px){
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 100;
+        background-color: var(--color2);
+        transition: all 0.2s ease-in-out;
+    }
+    .menu li {margin-top: 40px;}
+    .menu li a {padding: 10px;}
+    .open-menu , .close-menu {display: block;}
+    #check:checked ~ .menu {right: 0;}
+}
+.container{
+    position: relative;
+    width: 100%;
+    height: 95vh;
+    /* background-color: black; */
+}
+
+.slider input{
+    visibility: hidden;
+    display: none;
+}
+
+.buttons{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    bottom: 50px;
+    gap: 10px;
+}
+
+.buttons label{
+    width: 20px;
+    height: 20px;
+    /* background-color: white; */
+    opacity: 0.5;
+    cursor: pointer;
+    z-index: 1;
+    transition:  300ms ease-in-out;
+}
+
+.buttons label:hover{
+    scale: 1.2;
+    opacity: 1;
+}
+
+.slider input:nth-child(1):checked ~ .buttons label:nth-child(1),
+.slider input:nth-child(2):checked ~ .buttons label:nth-child(2),
+.slider input:nth-child(3):checked ~ .buttons label:nth-child(3)
+{
+    opacity: 1;
+    scroll-margin: 1.2;
+    width: 40px;
+}
+
+.content{
+    position: relative;
+    width: 300vw;
+    display: flex;
+    transition: 400ms ease-in-out;
+}
+
+.firstslide,.secondslide,.thirdslide{
+    display: grid;
+    position: relative;
+    width: 100vw;
+    height: 800px;
+     /* display: flex;
+    justify-content: center;
+    align-items: center;  */
+}
+
+
+/* .firstslide{
+    
+}
+
+.secondslide{
+    
+}
+
+.thirdslide{
+    
+} */
+.img-slide{
+    display: grid;
+    width: 75%;
+    align-items: end;
+    justify-content: end;
+
+    border-radius: 8%;
+    
+    
+}
+.img-slide a{
+    background-attachment: fixed;    
+}
+.mig{
+    display: grid;
+    justify-content: end;
+
+    
+}
+.img-s{
+    width: 400px;
+    height: 580x;
+    /* background-color: #b2f2bb; */
+    border-radius: 10px;
+
+}
+.primero{
+    background-color: #b2f2bb;
+}
+.segundo{
+    background-color: #ffcceb;
+}
+.tercero{
+    background-color: #ef6bbb;
+}
+.slider input:nth-child(1):checked ~ .content{
+    left: 0;
+}
+
+.slider input:nth-child(2):checked ~ .content{
+    left: -100vw;
+}
+
+.slider input:nth-child(3):checked ~ .content{
+    left: -200vw;
+}
+
+h1{
+    font-size: 5rem;
+    margin-left: 1.5rem;
+    width: auto;
+
+}
+p{
+    margin-left: 2rem;
+    
+}
+
+.redes{
+    display: grid;
+   place-content: end;
+    
+    
+}
+.footer{
+    display: flex;
+    justify-content: end;
+}
+@media(max-width: 610px){
+    .img-slide{
+        margin-top: 2rem;
+        margin-left: 3rem;
+    }
+}

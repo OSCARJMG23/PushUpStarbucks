@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks</title>
+    <link rel="stylesheet" href="./Styles/Style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" /></head>
+<body>
+    <header>
+    <nav>
+        <ul class='nav-bar'>
+            <li class='logo'><a href='#'><img src='./Imgs/logo.png'/></a></li>
+            <input type='checkbox' id='check' />
+            <span class="menu">
+                <li><a href="">Inicio</a></li>
+                <li><a href="https://www.starbucks.com.co/menu" target="_blank">Menu</a></li>
+                <li><a href="https://www.starbucks.com.co/seccion/novedades" target="_blank">Novedades</a></li>
+                <li><a href="https://www.starbucks.com.co/stores" target="_blank">Contacto</a></li>
+                <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+            </span>
+            <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+        </ul>
+    </nav>
+    </header>
+
+    <div class="container">
+
+        <div class="slider">
+
+            <input type="radio" name="slider" id="slideOne" checked>
+            <input type="radio" name="slider" id="slideTwo">
+            <input type="radio" name="slider" id="slideThree">
+
+            <div class="buttons">
+                <label for="slideOne"><img src="./Imgs/thumb1.png" alt=""></label>
+                <label for="slideTwo"><img src="./Imgs/thumb2.png" alt=""></label>
+                <label for="slideThree"><img src="./Imgs/thumb3.png" alt=""></label>
+            </div>
+
+            <div class="content">
+                <div class="firstslide">
+                    <h1>Green Tea Frapuccino</h1>
+                    <p>Bebida licuada de Té matcha, mezclado con jarabe clásico, hielo y leche de tu preferencia, <br> terminada con crema batida.</p>
+                    <div class="mig">
+                        <div class="img-slide">
+                            <img src="./Imgs/img1.png" alt="" class="img-s primero">
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="secondslide">
+                    <H1>Fresa Cream Frapuccino</H1>
+                    <p>Una nueva forma de tomar una bebida frappé de fresa, mezclada con hielo y leche, terminada con crema batida y salsa de fresa.</p>
+                    <div class="mig">
+                        <div class="img-slide">
+                            <img src="./Imgs/img2.png" alt="" class="img-s segundo">
+                        </div>
+                    </div>
+                </div>
+                <div class="thirdslide">
+                    <H1>Dragon Drink</H1>
+                    <p>Nuestro Mango Dragonfruit Refresher con leche de coco para una sensación cremosa y refrescante.</p>
+                    <div class="mig">
+                        <div class="img-slide">
+                            <img src="./Imgs/img3.png" alt="" class="img-s tercero">
+                        </div>
+                    </div>
+                
+                </div>
+            
+            </div>  
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="redes">
+            <a href="https://www.facebook.com/StarbucksColombia/?locale=es_LA" target="_blank"><img src="./Imgs/facebook.png" alt=""></a>
+            <a href="https://www.instagram.com/starbuckscol/?hl=es" target="_blank"><img src="./Imgs/instagram.png" alt=""></a>
+            <a href="https://twitter.com/Starbucks" target="_blank"><img src="./Imgs/twitter.png" alt=""></a>
+        </div>
+    </footer>
+</body>
+</html>
